@@ -1,4 +1,4 @@
-sql语句
+# sql语句
 
 sql删除或清空表数据
 一、sql清空表数据的三种方式:
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS app_data (
    files_data text,
    device_name text,
    idfa text,
-   os_index integer, 
+   os_index integer,
    UNIQUE(bundle_id,account_id) ON CONFLICT REPLACE       -- bundle_id,account_id 组成的联合体不重复
 );
 
@@ -47,10 +47,8 @@ CREATE TABLE IF NOT EXISTS target (
    UNIQUE(target_bundle_id,assistant_version) ON CONFLICT REPLACE
 );
 
-
-# hex 2进制数据以 16进制字符串的形式显示
+hex 2进制数据以 16进制字符串的形式显示
 select hex(acct) from genp where agrp == "5YBWG2X244.cn.jobs8.keychain";
 
-
-# limit 限制返回条数
+limit 限制返回条数
 select hex(acct) from genp limit n;
