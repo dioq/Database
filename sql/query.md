@@ -26,7 +26,7 @@ select hex(column) from TABLE_NAME where [condition];
 
 select ID, NAME, SALARY from COMPANY;
 查询条数
-select count(*) from keychain where remarks = 'wechatbackup';
+select count(*) from keychain where remarks == 'wechatbackup';
 
 以 16进制字符串的形式显示二进制数据
 select hex(acct) from genp where agrp == "5YBWG2X244.cn.jobs8.keychain";
