@@ -1,16 +1,16 @@
 # sql 语句
 
 创建表
-create table app_data
+create table tstudy
 (
     id           integer primary key autoincrement,
     createtime   datetime default (datetime('now', 'localtime')),
     updatetime   datetime default (datetime('now', 'localtime')),
-    bundle_id    text not null,
-    storage_name text not null,
-    display_name text,
-    keychain     text,
-    size         integer default 0
+    uuid         text not null,
+    name         text not null,
+    weath        REAL default 0,
+    size         integer default 0,
+    data         BLOB
 );
 
 insert into app_data (bundle_id,storage_name,display_name) values ("com.tencent.xin","UUUU-ddddd","wxid_01")
@@ -33,3 +33,6 @@ SELECT * FROM app_data where bundle_id = "cn.jobs8.TargetForBackup" ORDER BY upd
 select distinct bundle_id from app_data;
 
 insert into app_data (bundle_id,storage_name,display_name,size) values ("com.tencent.xin","UUUU-ddddd","wxid_01",1000)
+
+update更新某一列为另一列
+update app_data set wxid = display_name;

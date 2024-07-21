@@ -16,6 +16,11 @@ UNIQUE(column1,column2) ON CONFLICT REPLACE              -- column1,column2 组�
 
 drop from TABLE_NAME;
 
-## truncate 清空表(保留表结构)
+## COLUMN
 
-truncate TABLE_NAME;
+添加列
+alter table [table_name] add [column_name] type;
+删除列
+alter table [table_name] drop column [column_name];
+改列名
+ALTER TABLE [table_name] RENAME COLUMN [old_column_name] TO [new_column_name];
